@@ -1,21 +1,15 @@
-import Nav from './Nav'
-import Meta from './Meta'
-import Header from './Header'
-import styles from '../styles/Layout.module.css'
+import { Box } from '@mui/material';
+import Nav from './Nav';
+import Meta from './Meta';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Meta />
       <Nav />
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Header />
-          {children}
-        </main>
-      </div>
+      <Box>{children}</Box>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

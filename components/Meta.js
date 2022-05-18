@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const Meta = ({ title, keywords, description }) => {
   return (
@@ -10,13 +10,13 @@ const Meta = ({ title, keywords, description }) => {
       <link rel='icon' href='/favicon.ico' />
       <title>{title}</title>
     </Head>
-  )
-}
+  );
+};
 
 Meta.defaultProps = {
-  title: 'WebDev Newz',
-  keywords: 'web development, programming',
-  description: 'Get the latest news in web dev',
-}
+  title: 'River Village Resort',
+  keywords: 'Restaurant, Camping, Fishing, Cottages, Treehouse',
+  description: 'Eat, Relax and enjoy native life',
+};
 
-export default Meta
+export default Meta;

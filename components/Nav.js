@@ -1,25 +1,32 @@
-import Link from "next/link";
-import navStyles from "../styles/Nav.module.css";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-// import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Image from 'next/image';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 const Nav = (props) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position='static' color='inherit'>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            River Village Resort
+          <Typography
+            variant='h6'
+            component='div'
+            sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}
+          >
+            <Image
+              src='/images/logo.png'
+              alt='river-village-logo'
+              loading='lazy'
+              width='100'
+              height='60'
+            />
           </Typography>
           <Box>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button variant="outlined" color="inherit">
+            <Button color='inherit'>Home</Button>
+            <Button color='inherit'>About</Button>
+            <Button variant='outlined' color='inherit'>
               Contact Us
             </Button>
           </Box>
