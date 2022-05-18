@@ -16,10 +16,10 @@ const Header = () => {
   return (
     <HeroContainer>
       <Box width='auto'>
-        <Typography variant='h1' component='h1'>
+        <Typography variant='h1' component='h1' sx={{ fontSize: '5rem' }}>
           Welcome Villagers!
         </Typography>
-        <Typography sx={{ fontSize: '1.5rem' }} component='p'>
+        <Typography component='p' sx={{ fontSize: '1.5rem' }}>
           Eat, Relax and enjoy native life.
         </Typography>
         <Box mt={3}>
