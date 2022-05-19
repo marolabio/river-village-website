@@ -25,7 +25,7 @@ const Nav = (props) => {
           </Typography>
           <Box>
             <Button color='inherit'>Home</Button>
-            <Button color='inherit'>About</Button>
+            <Button color='inherit'>Explore</Button>
             <Button variant='outlined' color='inherit'>
               Contact Us
             </Button>

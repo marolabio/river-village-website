@@ -2,30 +2,25 @@ import {
   Box,
   Container,
   Grid,
-  Paper,
-  Stack,
   styled,
   Typography,
-  ImageList,
-  ImageListItem,
+  Button,
+  Stack,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import Image from 'next/image';
 
 const ExploreContainer = styled(Container)({
   background: '#F5F5F5',
-  height: 'auto',
+  height: '100vh',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '10px',
   paddingBottom: '20px',
 });
-
-const Item = styled(Box)(({ theme }) => ({
-  ...theme.typography.body1,
-  padding: theme.spacing(1),
-  color: theme.palette.text.secondary,
-}));
 
 const itemData = [
   {
@@ -38,38 +33,116 @@ const itemData = [
   },
 ];
 
+const MenuItems = [
+  'Restaurant',
+  'Treehouse',
+  'Cottage',
+  'Kayaking',
+  'Fishing and Fish Feeding',
+  'Camping',
+];
+
 function Explore() {
+  const [selectedItem, setSelectedItem] = useState(0);
+
   return (
     <ExploreContainer>
       <Grid container spacing={2} mt={4}>
-        <Grid item xs={4}>
-          <Stack direction='column' mt={6}>
-            <Item>Restaurant</Item>
-            <Item>Treehouse</Item>
-            <Item>Cottage</Item>
-            <Item>Kayaking</Item>
-            <Item>Fishing and Fish Feeding</Item>
-            <Item>Camping</Item>
-          </Stack>
+        <Grid item xs={4} mt={4}>
+          <MenuList>
+            {MenuItems.map((option, index) => (
+              <MenuItem
+                key={option}
+                selected={index === selectedItem}
+                onClick={() => setSelectedItem(index)}
+                disableRipple
+                fullWidth='false'
+                sx={{
+                  display: 'table',
+                  paddingLeft: 0,
+                  paddingRight: 0,
+                  borderBottom: '2px solid transparent',
+
+                  '&:hover': {
+                    background: 'transparent',
+                  },
+                  '&.Mui-selected': {
+                    background: 'transparent',
+                    borderBottom: '2px solid #6C4621',
+                    '&:hover': {
+                      background: 'transparent',
+                    },
+                  },
+                }}
+              >
+                {option}
+              </MenuItem>
+            ))}
+          </MenuList>
         </Grid>
         <Grid item xs={8}>
-          <Typography variant='h4' component='h2'>
-            Explore
+          <Typography
+            variant='h6'
+            component='h2'
+            sx={{ color: '#6C4621', letterSpacing: '2px', fontSize: '1rem' }}
+          >
+            EXPLORE
           </Typography>
-          <Box sx={{ width: 700, height: 450 }}>
-            <ImageList cols={3} gap={8}>
-              {itemData.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading='lazy'
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-          </Box>
+          <Typography
+            variant='h1'
+            component='h2'
+            sx={{ color: '#FFF', fontSize: '2.5rem', color: '#6C4621' }}
+          >
+            {MenuItems[selectedItem]}
+          </Typography>
+          <Grid container mt={3}>
+            <Grid item xs={6}>
+              <Box
+                sx={{
+                  width: 350,
+                  height: 400,
+                  backgroundColor: 'primary.dark',
+                }}
+              >
+                {/* <img
+                  src={`${itemData[0].img}`}
+                  srcSet={`${itemData[0].img}`}
+                  alt={itemData[0].title}
+                  height='auto'
+                  width='100%'
+                /> */}
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+              }}
+            >
+              <Typography
+                component='p'
+                mb={2}
+                sx={{ color: '#FFF', fontSize: '1rem', color: '#6C4621' }}
+              >
+                Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s.
+              </Typography>
+              <Box
+                sx={{
+                  width: 350,
+                  height: 250,
+                  backgroundColor: 'primary.dark',
+                  '&:hover': {
+                    backgroundColor: 'primary.main',
+                    opacity: [0.9, 0.8, 0.7],
+                  },
+                }}
+              ></Box>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </ExploreContainer>

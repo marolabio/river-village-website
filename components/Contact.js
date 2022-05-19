@@ -20,9 +20,9 @@ function Contact() {
   return (
     <Container sx={{ height: '50vh', background: '#FFF' }}>
       <Grid container spacing={2} mt={4}>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Typography variant='h4' component='h2'>
-            Contact Us
+            Contact Info
           </Typography>
           <Stack direction='column' mt={2}>
             <Item>
@@ -33,21 +33,40 @@ function Contact() {
               <EmailIcon />
               rivervillageresort2022@gmail.com
             </Item>
-            <Item>
-              <PlaceIcon />
-              156 Brgy. Ilog Malino, Bolinao Pangasinan 2406 Philippines
-            </Item>
-            <Item>
-              <AccessTimeFilledIcon /> Business Hours: Monday - Sunday, 9 am - 9
-              pm
-            </Item>
+
             <Item>
               <FacebookIcon /> facebook.com/rivervillageresort
             </Item>
           </Stack>
         </Grid>
-        <Grid item xs={6}></Grid>
+        <Grid item xs={4}>
+          <Typography variant='h4' component='h2'>
+            Address
+          </Typography>
+          <Item>
+            <PlaceIcon />
+            156 Brgy. Ilog Malino, Bolinao Pangasinan 2406 Philippines
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Typography variant='h4' component='h2'>
+            Business Hours
+          </Typography>
+          <Item>
+            <AccessTimeFilledIcon /> Business Hours: Monday - Sunday, 9 am - 9
+            pm
+          </Item>
+        </Grid>
       </Grid>
+      <Box mt={4}>
+        <img
+          src='/images/logo.png'
+          alt='river-village-logo'
+          loading='lazy'
+          width='100'
+          height='60'
+        />
+      </Box>
     </Container>
   );
 }
