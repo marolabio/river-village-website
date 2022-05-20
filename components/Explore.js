@@ -6,6 +6,8 @@ import {
   Typography,
   Button,
   Stack,
+  ImageList,
+  ImageListItem,
 } from '@mui/material';
 import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
@@ -14,7 +16,7 @@ import Image from 'next/image';
 
 const ExploreContainer = styled(Container)({
   background: '#F5F5F5',
-  height: '100vh',
+  height: '100%',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -22,37 +24,60 @@ const ExploreContainer = styled(Container)({
   paddingBottom: '20px',
 });
 
-const itemData = [
+const exploreData = [
   {
-    img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-    title: 'Bed',
+    id: 0,
+    name: 'Restaurant',
+    images: [
+      { img: '/images/restaurant1.jpg' },
+      { img: '/images/restaurant2.jpg' },
+    ],
   },
   {
-    img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
-    title: 'Books',
+    id: 1,
+    name: 'Treehouse',
+    images: [
+      { img: '/images/treehouse1.jpg' },
+      { img: '/images/treehouse2.jpg' },
+    ],
   },
-];
-
-const MenuItems = [
-  'Restaurant',
-  'Treehouse',
-  'Cottage',
-  'Kayaking',
-  'Fishing and Fish Feeding',
-  'Camping',
+  {
+    id: 2,
+    name: 'Cottages',
+    images: [
+      { img: '/images/cottages1.jpg' },
+      { img: '/images/cottages2.jpg' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Kayaking',
+    images: [{ img: '/images/kayak1.jpg' }, { img: '/images/kayak2.jpg' }],
+  },
+  {
+    id: 4,
+    name: 'Fishing and Fish Feeding',
+    images: [{ img: '/images/fishing1.jpg' }, { img: '/images/fishing2.jpg' }],
+  },
+  {
+    id: 5,
+    name: 'Camping',
+    images: [{ img: '/images/camping1.jpg' }, { img: '/images/camping2.jpg' }],
+  },
 ];
 
 function Explore() {
   const [selectedItem, setSelectedItem] = useState(0);
 
+  const data = exploreData[selectedItem];
   return (
     <ExploreContainer>
       <Grid container spacing={2} mt={4}>
         <Grid item xs={4} mt={4}>
           <MenuList>
-            {MenuItems.map((option, index) => (
+            {exploreData.map(({ id, name }, index) => (
               <MenuItem
-                key={option}
+                key={id}
                 selected={index === selectedItem}
                 onClick={() => setSelectedItem(index)}
                 disableRipple
@@ -75,7 +100,7 @@ function Explore() {
                   },
                 }}
               >
-                {option}
+                {name}
               </MenuItem>
             ))}
           </MenuList>
@@ -93,25 +118,18 @@ function Explore() {
             component='h2'
             sx={{ color: '#FFF', fontSize: '2.5rem', color: '#6C4621' }}
           >
-            {MenuItems[selectedItem]}
+            {data.name}
           </Typography>
-          <Grid container mt={3}>
+          <Grid container mt={3} mb={4}>
             <Grid item xs={6}>
               <Box
                 sx={{
-                  width: 350,
+                  width: 380,
                   height: 400,
-                  backgroundColor: 'primary.dark',
+                  background: `url(${data.images[0].img}) no-repeat`,
+                  backgroundSize: '100% 100%',
                 }}
-              >
-                {/* <img
-                  src={`${itemData[0].img}`}
-                  srcSet={`${itemData[0].img}`}
-                  alt={itemData[0].title}
-                  height='auto'
-                  width='100%'
-                /> */}
-              </Box>
+              ></Box>
             </Grid>
             <Grid
               item
@@ -134,11 +152,8 @@ function Explore() {
                 sx={{
                   width: 350,
                   height: 250,
-                  backgroundColor: 'primary.dark',
-                  '&:hover': {
-                    backgroundColor: 'primary.main',
-                    opacity: [0.9, 0.8, 0.7],
-                  },
+                  background: `url(${data.images[1].img}) no-repeat `,
+                  backgroundSize: '100% 100%',
                 }}
               ></Box>
             </Grid>

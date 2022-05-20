@@ -18,10 +18,18 @@ const Item = styled(Box)(({ theme }) => ({
 
 function Contact() {
   return (
-    <Container sx={{ height: '50vh', background: '#FFF' }}>
-      <Grid container spacing={2} mt={4}>
+    <Container
+      sx={{
+        height: '400',
+        background: '#FFF',
+        marginTop: '-140px',
+        paddingTop: 25,
+        paddingBottom: 10,
+      }}
+    >
+      <Grid container spacing={1}>
         <Grid item xs={4}>
-          <Typography variant='h4' component='h2'>
+          <Typography variant='h5' component='h3'>
             Contact Info
           </Typography>
           <Stack direction='column' mt={2}>
@@ -40,7 +48,7 @@ function Contact() {
           </Stack>
         </Grid>
         <Grid item xs={4}>
-          <Typography variant='h4' component='h2'>
+          <Typography variant='h5' component='h3'>
             Address
           </Typography>
           <Item>
@@ -49,7 +57,7 @@ function Contact() {
           </Item>
         </Grid>
         <Grid item xs={4}>
-          <Typography variant='h4' component='h2'>
+          <Typography variant='h5' component='h3'>
             Business Hours
           </Typography>
           <Item>
@@ -58,7 +66,7 @@ function Contact() {
           </Item>
         </Grid>
       </Grid>
-      <Box mt={4}>
+      {/* <Box mt={4} sx={{ alignSelf: 'flex-end' }}>
         <img
           src='/images/logo.png'
           alt='river-village-logo'
@@ -66,7 +74,7 @@ function Contact() {
           width='100'
           height='60'
         />
-      </Box>
+      </Box> */}
     </Container>
   );
 }

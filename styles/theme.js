@@ -35,6 +35,11 @@ const theme = createTheme({
     h1: {
       fontFamily: 'Playfair Display',
     },
+    h5: {
+      fontFamily: 'Playfair Display',
+      color: '#52391D',
+      paddingLeft: 12,
+    },
     h4: {
       fontFamily: 'Playfair Display',
       color: '#52391D',
