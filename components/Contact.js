@@ -16,6 +16,14 @@ const Item = styled(Box)(({ theme }) => ({
   },
 }));
 
+const responsive = {
+  xs: 12,
+  sm: 12,
+  md: 4,
+  lg: 4,
+  xl: 4,
+};
+
 function Contact() {
   return (
     <Container
@@ -27,8 +35,8 @@ function Contact() {
         paddingBottom: 10,
       }}
     >
-      <Grid container spacing={1}>
-        <Grid item xs={4}>
+      <Grid container spacing={3}>
+        <Grid item {...responsive}>
           <Typography variant='h5' component='h3'>
             Contact Info
           </Typography>
@@ -47,7 +55,7 @@ function Contact() {
             </Item>
           </Stack>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item {...responsive}>
           <Typography variant='h5' component='h3'>
             Address
           </Typography>
@@ -56,7 +64,7 @@ function Contact() {
             156 Brgy. Ilog Malino, Bolinao Pangasinan 2406 Philippines
           </Item>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item {...responsive}>
           <Typography variant='h5' component='h3'>
             Business Hours
           </Typography>
@@ -66,15 +74,6 @@ function Contact() {
           </Item>
         </Grid>
       </Grid>
-      {/* <Box mt={4} sx={{ alignSelf: 'flex-end' }}>
-        <img
-          src='/images/logo.png'
-          alt='river-village-logo'
-          loading='lazy'
-          width='100'
-          height='60'
-        />
-      </Box> */}
     </Container>
   );
 }

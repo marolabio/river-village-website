@@ -28,6 +28,7 @@ const exploreData = [
   {
     id: 0,
     name: 'Restaurant',
+    details: 'Dine and taste the of Bolinao Filipino dishes and Seafoods',
     images: [
       { img: '/images/restaurant1.jpg' },
       { img: '/images/restaurant2.jpg' },
@@ -36,6 +37,7 @@ const exploreData = [
   {
     id: 1,
     name: 'Treehouse',
+    details: '',
     images: [
       { img: '/images/treehouse1.jpg' },
       { img: '/images/treehouse2.jpg' },
@@ -44,6 +46,7 @@ const exploreData = [
   {
     id: 2,
     name: 'Cottages',
+    details: '',
     images: [
       { img: '/images/cottages1.jpg' },
       { img: '/images/cottages2.jpg' },
@@ -52,19 +55,30 @@ const exploreData = [
   {
     id: 3,
     name: 'Kayaking',
+    details: '',
     images: [{ img: '/images/kayak1.jpg' }, { img: '/images/kayak2.jpg' }],
   },
   {
     id: 4,
     name: 'Fishing and Fish Feeding',
+    details: '',
     images: [{ img: '/images/fishing1.jpg' }, { img: '/images/fishing2.jpg' }],
   },
   {
     id: 5,
     name: 'Camping',
+    details: '',
     images: [{ img: '/images/camping1.jpg' }, { img: '/images/camping2.jpg' }],
   },
 ];
+
+const responsive = {
+  xs: 12,
+  sm: 12,
+  md: 4,
+  lg: 4,
+  xl: 4,
+};
 
 function Explore() {
   const [selectedItem, setSelectedItem] = useState(0);
@@ -73,7 +87,7 @@ function Explore() {
   return (
     <ExploreContainer>
       <Grid container spacing={2} mt={4}>
-        <Grid item xs={4} mt={4}>
+        <Grid item {...responsive} mt={4}>
           <MenuList>
             {exploreData.map(({ id, name }, index) => (
               <MenuItem
@@ -105,7 +119,7 @@ function Explore() {
             ))}
           </MenuList>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
           <Typography
             variant='h6'
             component='h2'
@@ -121,7 +135,7 @@ function Explore() {
             {data.name}
           </Typography>
           <Grid container mt={3} mb={4}>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Box
                 sx={{
                   width: 380,
@@ -133,7 +147,11 @@ function Explore() {
             </Grid>
             <Grid
               item
-              xs={6}
+              xs={12}
+              sm={12}
+              md={12}
+              lg={6}
+              xl={6}
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -142,12 +160,18 @@ function Explore() {
             >
               <Typography
                 component='p'
+                mt={2}
                 mb={2}
-                sx={{ color: '#FFF', fontSize: '1rem', color: '#6C4621' }}
+                sx={{
+                  color: '#FFF',
+                  fontSize: '1rem',
+                  color: '#6C4621',
+                  width: 350,
+                }}
               >
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s.
+                {data.details}
               </Typography>
+
               <Box
                 sx={{
                   width: 350,
