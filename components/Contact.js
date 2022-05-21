@@ -51,7 +51,8 @@ function Contact() {
             </Item>
 
             <Item>
-              <FacebookIcon /> facebook.com/rivervillageresort
+              <FacebookIcon />
+              facebook.com/rivervillageresort
             </Item>
           </Stack>
         </Grid>
@@ -69,8 +70,8 @@ function Contact() {
             Business Hours
           </Typography>
           <Item>
-            <AccessTimeFilledIcon /> Business Hours: Monday - Sunday, 9 am - 9
-            pm
+            <AccessTimeFilledIcon />
+            Monday - Sunday, 9 am - 9 pm
           </Item>
         </Grid>
       </Grid>

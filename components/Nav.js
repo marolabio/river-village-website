@@ -1,7 +1,6 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
@@ -15,7 +14,7 @@ const Nav = (props) => {
             component='div'
             sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}
           >
-            <Image
+            <img
               src='/images/logo.png'
               alt='river-village-logo'
               loading='lazy'

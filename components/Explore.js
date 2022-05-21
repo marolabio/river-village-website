@@ -12,7 +12,6 @@ import {
 import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Image from 'next/image';
 
 const ExploreContainer = styled(Container)({
   background: '#F5F5F5',
@@ -28,7 +27,7 @@ const exploreData = [
   {
     id: 0,
     name: 'Restaurant',
-    details: 'Dine and taste the of Bolinao Filipino dishes and Seafoods',
+    details: 'Dine and taste Bolinao Filipino dishes and Seafoods',
     images: [
       { img: '/images/restaurant1.jpg' },
       { img: '/images/restaurant2.jpg' },
@@ -95,7 +94,6 @@ function Explore() {
                 selected={index === selectedItem}
                 onClick={() => setSelectedItem(index)}
                 disableRipple
-                fullWidth='false'
                 sx={{
                   display: 'table',
                   paddingLeft: 0,
