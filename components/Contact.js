@@ -1,4 +1,12 @@
-import { Container, Typography, Grid, Stack, styled, Box } from '@mui/material';
+import {
+  Container,
+  Typography,
+  Grid,
+  Stack,
+  styled,
+  Box,
+  Link,
+} from '@mui/material';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
@@ -62,7 +70,12 @@ function Contact() {
           </Typography>
           <Item>
             <PlaceIcon />
-            156 Brgy. Ilog Malino, Bolinao Pangasinan 2406 Philippines
+            <Link
+              href='https://www.google.com/maps/place/156+Patar+Rd,+Bolinao,+Pangasinan/@16.3577634,119.8159357,17z/data=!3m1!4b1!4m5!3m4!1s0x3393c995e75d72a1:0x19af4f0573ca8f0a!8m2!3d16.3577634!4d119.8181244'
+              underline='none'
+            >
+              156 Patar Road, Bolinao, Pangasinan 2406 Philippines
+            </Link>
           </Item>
         </Grid>
         <Grid item {...responsive}>

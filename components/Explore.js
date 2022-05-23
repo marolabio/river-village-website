@@ -85,8 +85,8 @@ function Explore() {
   const data = exploreData[selectedItem];
   return (
     <ExploreContainer>
-      <Grid container spacing={2} mt={4}>
-        <Grid item {...responsive} mt={4}>
+      <Grid container spacing={2} mt={{ xs: 0, md: 4 }}>
+        <Grid item {...responsive} mt={{ xs: 0, md: 4 }}>
           <MenuList>
             {exploreData.map(({ id, name }, index) => (
               <MenuItem
@@ -121,7 +121,7 @@ function Explore() {
           <Typography
             variant='h6'
             component='h2'
-            sx={{ color: '#6C4621', letterSpacing: '2px', fontSize: '1rem' }}
+            sx={{ color: '#266A2E', letterSpacing: '2px', fontSize: '1rem' }}
           >
             EXPLORE
           </Typography>
@@ -136,12 +136,21 @@ function Explore() {
             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Box
                 sx={{
-                  width: 380,
-                  height: 400,
-                  background: `url(${data.images[0].img}) no-repeat`,
-                  backgroundSize: '100% 100%',
+                  maxWidth: {
+                    xs: '100%',
+                    md: 380,
+                  },
                 }}
-              ></Box>
+              >
+                <Box
+                  sx={{
+                    background: `url(${data.images[0].img}) no-repeat center`,
+                    backgroundSize: 'contain',
+                    width: '100%',
+                    paddingTop: '80%',
+                  }}
+                ></Box>
+              </Box>
             </Grid>
             <Grid
               item
@@ -164,7 +173,6 @@ function Explore() {
                   color: '#FFF',
                   fontSize: '1rem',
                   color: '#6C4621',
-                  width: 350,
                 }}
               >
                 {data.details}
@@ -172,12 +180,21 @@ function Explore() {
 
               <Box
                 sx={{
-                  width: 350,
-                  height: 250,
-                  background: `url(${data.images[1].img}) no-repeat `,
-                  backgroundSize: '100% 100%',
+                  maxWidth: {
+                    xs: '100%',
+                    md: 350,
+                  },
                 }}
-              ></Box>
+              >
+                <Box
+                  sx={{
+                    background: `url(${data.images[1].img}) no-repeat center`,
+                    backgroundSize: 'contain',
+                    width: '100%',
+                    paddingTop: '65%',
+                  }}
+                ></Box>
+              </Box>
             </Grid>
           </Grid>
         </Grid>
