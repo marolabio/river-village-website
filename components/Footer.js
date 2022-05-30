@@ -50,7 +50,7 @@ function Footer() {
             <Stack direction='column' mt={2}>
               <Item>
                 {/* <LocalPhoneIcon /> */}
-                Globe 09176836670
+                Globe 09071599157
               </Item>
               <Item>
                 {/* <EmailIcon /> */}
