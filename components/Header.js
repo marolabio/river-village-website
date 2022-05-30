@@ -1,6 +1,6 @@
 import { Button, Box, Container, Typography, styled } from '@mui/material';
 
-const HeroContainer = styled(Container)({
+const HeroContainer = styled(Box)({
   background: "url('/images/hero.png') center center/cover no-repeat",
   height: '90vh',
   width: '100%',
@@ -15,19 +15,21 @@ const HeroContainer = styled(Container)({
 const Header = () => {
   return (
     <HeroContainer>
-      <Box width='auto'>
-        <Typography variant='h1' component='h1' sx={{ fontSize: '5rem' }}>
-          Welcome Villagers!
-        </Typography>
-        <Typography component='p' sx={{ fontSize: '1.5rem' }}>
-          Eat, Relax and enjoy native life.
-        </Typography>
-        {/* <Box mt={3}>
+      <Container>
+        <Box width='auto'>
+          <Typography variant='h1' component='h1' sx={{ fontSize: '5rem' }}>
+            Welcome Villagers!
+          </Typography>
+          <Typography component='p' sx={{ fontSize: '1.5rem' }}>
+            Eat, Relax and enjoy native life.
+          </Typography>
+          {/* <Box mt={3}>
           <Button variant='outlined' color='inherit'>
             Explore
           </Button>
         </Box> */}
-      </Box>
+        </Box>
+      </Container>
     </HeroContainer>
   );
 };

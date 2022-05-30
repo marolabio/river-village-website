@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, SwipeableDrawer } from '@mui/material';
+import { Container, IconButton, SwipeableDrawer } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
 
@@ -16,21 +16,22 @@ const Nav = ({ executeScroll }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' color='inherit'>
-        <Toolbar>
-          <Typography
-            variant='h6'
-            component='div'
-            sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}
-          >
-            <img
-              src='/images/logo.png'
-              alt='river-village-logo'
-              loading='lazy'
-              width='100'
-              height='60'
-            />
-          </Typography>
-          {/* <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Container disableGutters>
+          <Toolbar>
+            <Typography
+              variant='h6'
+              component='div'
+              sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}
+            >
+              <img
+                src='/images/logo.png'
+                alt='river-village-logo'
+                loading='lazy'
+                width='100'
+                height='60'
+              />
+            </Typography>
+            {/* <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <Button color='inherit'>Home</Button>
             <Button
               color='inherit'
@@ -45,13 +46,13 @@ const Nav = ({ executeScroll }) => {
             </Button>
           </Box> */}
 
-          {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
             <IconButton onClick={closeDrawer}>
               <MenuIcon color='primary' fontSize='large' />
             </IconButton>
           </Box> */}
 
-          {/* <SwipeableDrawer
+            {/* <SwipeableDrawer
             anchor='right'
             open={mobileOpen}
             onClose={closeDrawer}
@@ -78,7 +79,8 @@ const Nav = ({ executeScroll }) => {
               Contact Us
             </Button>
           </SwipeableDrawer> */}
-        </Toolbar>
+          </Toolbar>
+        </Container>
       </AppBar>
     </Box>
   );

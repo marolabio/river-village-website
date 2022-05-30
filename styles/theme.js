@@ -44,6 +44,10 @@ const theme = createTheme({
       fontFamily: 'Playfair Display',
       color: '#52391D',
     },
+    h6: {
+      fontFamily: 'Playfair Display',
+      color: '#52391D',
+    },
   },
   components: {
     MuiContainer: {

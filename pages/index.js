@@ -1,10 +1,10 @@
 import { server } from '../config';
 import Header from '../components/Header';
 import Explore from '../components/Explore';
-import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import { useRef } from 'react';
 import Nav from '../components/Nav';
-import VideoPlayer from '../components/VideoPlayer';
+import About from '../components/About';
 
 export default function Home() {
   const myRef = useRef(null);
@@ -16,9 +16,9 @@ export default function Home() {
     <>
       <Nav executeScroll={executeScroll} />
       <Header />
-      <VideoPlayer />
+      <About />
       <Explore myRef={myRef} />
-      <Contact />
+      <Footer />
     </>
   );
 }
