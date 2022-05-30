@@ -21,7 +21,7 @@ const Header = () => {
             Welcome Villagers!
           </Typography>
           <Typography component='p' sx={{ fontSize: '1.5rem' }}>
-            Eat, Relax and enjoy native life.
+            Eat delicious food, Relax and Experience native life
           </Typography>
           {/* <Box mt={3}>
           <Button variant='outlined' color='inherit'>

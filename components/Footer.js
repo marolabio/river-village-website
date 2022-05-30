@@ -35,7 +35,7 @@ const responsive = {
 
 function Footer() {
   return (
-    <Box mt={6} sx={{ borderTop: '2px solid #6C4621' }}>
+    <Box mt={6} sx={{ borderTop: '1px solid #6C4621' }}>
       <Container
         sx={{
           paddingTop: 5,

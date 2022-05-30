@@ -33,7 +33,8 @@ function About() {
             pt={2}
             sx={{
               textAlign: 'center',
-              border: '2px solid #52391D',
+              border: '1px solid #52391D',
+              borderStyle: 'dotted',
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
@@ -51,11 +52,13 @@ function About() {
                   lineHeight: '1.8',
                 }}
               >
-                River Village Resort is a unique spot for people to unwind. Its
-                native structures and village themed depicts the "old town's
-                folks of Bolinao's primitive living". It features recreational
-                activities such as camping, kayaking, fish-feeding, and the main
-                living of Bolinao's townsfolks which is fishing.
+                River Village Resort is a unique spot for people to unwind with
+                its native structures and village themed decorations. It
+                features recreational activities such as camping, kayaking,
+                fish-feeding, and fishing. There's also an in-house restaurant
+                which serves delicious Filipino and Western cuisine that uses
+                high quality ingredients exclusively from Bolinao's local
+                market.
               </Typography>
             </Box>
           </Box>

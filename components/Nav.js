@@ -24,7 +24,7 @@ const Nav = ({ executeScroll }) => {
               sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}
             >
               <img
-                src='/images/logo.png'
+                src='/images/logo2.png'
                 alt='river-village-logo'
                 loading='lazy'
                 width='100'

@@ -116,7 +116,7 @@ function Explore({ myRef }) {
           <Typography
             variant='h6'
             component='h2'
-            sx={{ color: '#266A2E', letterSpacing: '2px', fontSize: '1rem' }}
+            sx={{ color: '#7A7A7A', letterSpacing: '2px', fontSize: '1rem' }}
           >
             EXPLORE
           </Typography>

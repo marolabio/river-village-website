@@ -29,12 +29,15 @@ const keywords = [
   'bolinao pangasinan tourist spot',
   'patar white beach bolinao pangasinan',
   'fishing bolinao pangasinan',
+  'bolinao restaurant',
+  'best resort in bolinao',
 ];
 
 Meta.defaultProps = {
-  title: 'River Village Resort',
+  title: 'River Village Resort And Restaurant',
   keywords: keywords.toString(),
-  description: 'Eat, Enjoy and Relax with Located at Bolinao, Pangasinan',
+  description:
+    'Eat delicious food, Relax and Experience native life. Located at Ilog Malino, Bolinao Pangasinan.',
 };
 
 export default Meta;
