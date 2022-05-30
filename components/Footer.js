@@ -35,7 +35,7 @@ const responsive = {
 
 function Footer() {
   return (
-    <Box mt={6} sx={{ borderTop: '1px solid #6C4621' }}>
+    <Box mt={6} sx={{ borderTop: '1px dotted #6C4621' }}>
       <Container
         sx={{
           paddingTop: 5,
@@ -50,7 +50,7 @@ function Footer() {
             <Stack direction='column' mt={2}>
               <Item>
                 {/* <LocalPhoneIcon /> */}
-                Globe 09071599157
+                Smart 09071599157
               </Item>
               <Item>
                 {/* <EmailIcon /> */}

@@ -4,18 +4,41 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Container, IconButton, SwipeableDrawer } from '@mui/material';
+import {
+  Container,
+  IconButton,
+  SwipeableDrawer,
+  styled,
+  Alert,
+  Snackbar,
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import React from 'react';
+
+const Item = styled(Box)(({ theme }) => ({
+  ...theme.typography.body1,
+  paddingTop: theme.spacing(1),
+  paddingBottom: theme.spacing(1),
+  color: theme.palette.text.primary,
+  display: 'flex',
+  alignContent: 'center',
+  '.MuiSvgIcon-root': {
+    paddingRight: '6px',
+  },
+  cursor: 'pointer',
+}));
 
 const Nav = ({ executeScroll }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
 
   const closeDrawer = () => setMobileOpen((prev) => !prev);
+  const handleClose = () => setCopied((prev) => !prev);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static' color='inherit'>
+      <AppBar position='fixed' color='inherit'>
         <Container disableGutters>
           <Toolbar>
             <Typography
@@ -24,13 +47,34 @@ const Nav = ({ executeScroll }) => {
               sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}
             >
               <img
-                src='/images/logo2.png'
+                src='/images/logo.jpg'
                 alt='river-village-logo'
                 loading='lazy'
                 width='100'
                 height='60'
               />
             </Typography>
+
+            <Item
+              onClick={() => {
+                navigator.clipboard.writeText('09071599157');
+                setCopied(true);
+              }}
+            >
+              <LocalPhoneIcon />
+              Smart 09071599157
+              <Snackbar
+                open={copied}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                autoHideDuration={1000}
+                onClose={handleClose}
+              >
+                <Alert severity='success' sx={{ width: '100%' }}>
+                  Copied
+                </Alert>
+              </Snackbar>
+            </Item>
+
             {/* <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <Button color='inherit'>Home</Button>
             <Button
