@@ -61,7 +61,7 @@ const exploreData = [
   {
     id: 5,
     name: 'Camping',
-    details: 'Be one with nature',
+    details: 'Be one with nature. Unplug and enjoy the simplicity of nature.',
     images: [{ img: '/images/camping1.jpg' }, { img: '/images/camping2.jpg' }],
   },
 ];
