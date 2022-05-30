@@ -51,7 +51,7 @@ const theme = createTheme({
         root: {},
       },
       defaultProps: {
-        maxWidth: 'false',
+        maxWidth: 'xl',
       },
     },
   },

@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 
 const ExploreContainer = styled(Container)({
-  background: '#F5F5F5',
+  // background: '#F5F5F5',
   height: '100%',
   width: '100%',
   display: 'flex',
