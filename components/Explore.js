@@ -1,14 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  styled,
-  Typography,
-  Button,
-  Stack,
-  ImageList,
-  ImageListItem,
-} from '@mui/material';
+import { Box, Container, Grid, styled, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
@@ -79,12 +69,12 @@ const responsive = {
   xl: 4,
 };
 
-function Explore() {
+function Explore({ myRef }) {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const data = exploreData[selectedItem];
   return (
-    <ExploreContainer>
+    <ExploreContainer ref={myRef}>
       <Grid container spacing={2} mt={{ xs: 0, md: 4 }}>
         <Grid item {...responsive} mt={{ xs: 0, md: 4 }}>
           <MenuList>
@@ -112,7 +102,7 @@ function Explore() {
                   },
                 }}
               >
-                {name}
+                <span>{name}</span>
               </MenuItem>
             ))}
           </MenuList>

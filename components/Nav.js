@@ -8,8 +8,10 @@ import { IconButton, SwipeableDrawer } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
 
-const Nav = (props) => {
+const Nav = ({ executeScroll }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const closeDrawer = () => setMobileOpen((prev) => !prev);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -28,23 +30,32 @@ const Nav = (props) => {
               height='60'
             />
           </Typography>
-          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+          {/* <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <Button color='inherit'>Home</Button>
-            <Button color='inherit'>Explore</Button>
+            <Button
+              color='inherit'
+              onClick={() => {
+                executeScroll();
+              }}
+            >
+              Explore
+            </Button>
             <Button variant='outlined' color='inherit'>
               Contact Us
             </Button>
-          </Box>
+          </Box> */}
 
-          <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-            <IconButton onClick={() => setMobileOpen((prev) => !prev)}>
+          {/* <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <IconButton onClick={closeDrawer}>
               <MenuIcon color='primary' fontSize='large' />
             </IconButton>
-          </Box>
+          </Box> */}
 
-          <SwipeableDrawer
+          {/* <SwipeableDrawer
             anchor='right'
             open={mobileOpen}
+            onClose={closeDrawer}
+            onOpen={closeDrawer}
             PaperProps={{
               sx: {
                 width: '100%',
@@ -53,15 +64,20 @@ const Nav = (props) => {
               },
             }}
           >
-            <IconButton onClick={() => setMobileOpen((prev) => !prev)}>
+            <IconButton onClick={closeDrawer}>
               <CloseIcon color='primary' fontSize='large' />
             </IconButton>
             <Button color='inherit'>Home</Button>
-            <Button color='inherit'>Explore</Button>
+            <Button
+              color='inherit'
+              onClick={() => setMobileOpen((prev) => !prev)}
+            >
+              Explore
+            </Button>
             <Button variant='outlined' color='inherit'>
               Contact Us
             </Button>
-          </SwipeableDrawer>
+          </SwipeableDrawer> */}
         </Toolbar>
       </AppBar>
     </Box>

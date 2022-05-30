@@ -22,11 +22,11 @@ const Header = () => {
         <Typography component='p' sx={{ fontSize: '1.5rem' }}>
           Eat, Relax and enjoy native life.
         </Typography>
-        <Box mt={3}>
+        {/* <Box mt={3}>
           <Button variant='outlined' color='inherit'>
             Explore
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </HeroContainer>
   );
