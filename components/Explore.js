@@ -170,7 +170,7 @@ function Explore({ myRef }) {
                   },
                 }}
               >
-                <Typography component='p' variant='body1' mb={2}>
+                <Typography component='p' variant='body1' mb={2} mt={2}>
                   {data.details}
                 </Typography>
                 <Box

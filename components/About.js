@@ -39,7 +39,8 @@ function About() {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              padding: 4,
+              paddingBottom: 4,
+              paddingTop: 4,
             }}
           >
             <Typography variant='h3' component='h3' pb={2}>
