@@ -30,10 +30,7 @@ const Nav = () => {
     navigator.clipboard.writeText('09071599157');
     setCopied(true);
     ga.event({
-      action: 'Copy',
-      params: {
-        copy: 'Copy Number Button',
-      },
+      action: 'Copy Button Clicked',
     });
   };
 

@@ -6,6 +6,7 @@ import {
   styled,
   Box,
   Link,
+  Button,
 } from '@mui/material';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -13,6 +14,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PlaceIcon from '@mui/icons-material/Place';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import * as ga from '../lib/ga';
 
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
@@ -36,6 +38,14 @@ const responsive = {
 };
 
 function Footer() {
+  const handleRedirect = () => {
+    window.open('https://goo.gl/maps/BPGjiRUDc4xMS1wt6', '_ blank');
+
+    ga.event({
+      action: 'Address Link Clicked',
+    });
+  };
+
   return (
     <Box mt={6} sx={{ borderTop: '1px dotted #6C4621' }}>
       <Container
@@ -63,10 +73,13 @@ function Footer() {
               Address
             </Typography>
             <Item>
-              <PlaceIcon />
-              <Link href='https://www.google.com/maps/place/156+Patar+Rd,+Bolinao,+Pangasinan/@16.3577634,119.8159357,17z/data=!3m1!4b1!4m5!3m4!1s0x3393c995e75d72a1:0x19af4f0573ca8f0a!8m2!3d16.3577634!4d119.8181244'>
+              <Button
+                variant='text'
+                startIcon={<PlaceIcon />}
+                onClick={() => handleRedirect()}
+              >
                 156 Patar Road, Bolinao, Pangasinan 2406 Philippines
-              </Link>
+              </Button>
             </Item>
           </Grid>
           <Grid item {...responsive}>
