@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <>
-      <Nav executeScroll={executeScroll} />
-      <Header />
+      <Nav />
+      <Header executeScroll={executeScroll} />
       <About />
       <Explore myRef={myRef} />
       <Footer />

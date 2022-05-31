@@ -1,6 +1,6 @@
 import { Button, Box, Container, Typography, styled } from '@mui/material';
 
-const HeroContainer = styled(Box)({
+const HeroBackground = styled(Box)({
   background: "url('/images/hero.png') center center/cover no-repeat",
   height: '90vh',
   width: '100%',
@@ -12,25 +12,31 @@ const HeroContainer = styled(Box)({
   color: '#FFF',
 });
 
-const Header = () => {
+const Header = ({ executeScroll }) => {
   return (
-    <HeroContainer>
+    <HeroBackground>
       <Container>
-        <Box width='auto'>
-          <Typography variant='h1' component='h1' sx={{ fontSize: '5rem' }}>
-            Welcome Villagers!
+        <Box>
+          <Typography variant='h2' component='h1'>
+            Enjoy your stay in Bolinao
           </Typography>
-          <Typography component='p' sx={{ fontSize: '1.5rem' }}>
+          <Typography variant='subtitle1' component='h2'>
             Eat delicious food, Relax and Experience native life
           </Typography>
-          {/* <Box mt={3}>
-          <Button variant='outlined' color='inherit'>
-            Explore
-          </Button>
-        </Box> */}
+          <Box mt={3}>
+            <Button
+              variant='outlined'
+              color='inherit'
+              onClick={() => {
+                executeScroll();
+              }}
+            >
+              Explore
+            </Button>
+          </Box>
         </Box>
       </Container>
-    </HeroContainer>
+    </HeroBackground>
   );
 };
 

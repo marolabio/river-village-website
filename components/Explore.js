@@ -4,13 +4,11 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 
 const ExploreContainer = styled(Container)({
-  // background: '#F5F5F5',
   height: '100%',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '10px',
-  // paddingBottom: '20px',
 });
 
 const exploreData = [
@@ -91,40 +89,32 @@ function Explore({ myRef }) {
                 disableRipple
                 sx={{
                   display: 'table',
-                  paddingLeft: 0,
-                  paddingRight: 0,
-                  borderBottom: '2px solid transparent',
+                  // paddingLeft: 0,
+                  // paddingRight: 0,
+                  border: '2px dotted transparent',
 
                   '&:hover': {
                     background: 'transparent',
                   },
                   '&.Mui-selected': {
                     background: 'transparent',
-                    borderBottom: '2px solid #6C4621',
+                    border: '1px dotted #6C4621',
                     '&:hover': {
                       background: 'transparent',
                     },
                   },
                 }}
               >
-                <span>{name}</span>
+                {name}
               </MenuItem>
             ))}
           </MenuList>
         </Grid>
         <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
-          <Typography
-            variant='h6'
-            component='h2'
-            sx={{ color: '#7A7A7A', letterSpacing: '2px', fontSize: '1rem' }}
-          >
+          <Typography variant='h5' component='h5'>
             EXPLORE
           </Typography>
-          <Typography
-            variant='h1'
-            component='h2'
-            sx={{ color: '#FFF', fontSize: '2.5rem', color: '#6C4621' }}
-          >
+          <Typography variant='h3' component='h3'>
             {data.name}
           </Typography>
           <Grid container mt={3} mb={4}>
@@ -180,16 +170,7 @@ function Explore({ myRef }) {
                   },
                 }}
               >
-                <Typography
-                  component='p'
-                  mt={2}
-                  mb={4}
-                  sx={{
-                    color: '#FFF',
-                    fontSize: '1rem',
-                    color: '#6C4621',
-                  }}
-                >
+                <Typography component='p' variant='body1' mb={2}>
                   {data.details}
                 </Typography>
                 <Box

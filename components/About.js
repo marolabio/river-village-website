@@ -33,21 +33,22 @@ function About() {
             pt={2}
             sx={{
               textAlign: 'center',
-              border: '1px solid #52391D',
-              borderStyle: 'dotted',
+              border: '1px dotted #52391D',
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
+              padding: 4,
             }}
           >
-            <Typography variant='h5' pb={2}>
+            <Typography variant='h3' component='h3' pb={2}>
               About River Village
             </Typography>
             <Box maxWidth='85%'>
               <Typography
-                paragraph
+                component='p'
+                variant='body1'
                 sx={{
                   lineHeight: '1.8',
                 }}

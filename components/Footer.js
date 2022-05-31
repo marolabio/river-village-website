@@ -12,14 +12,13 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PlaceIcon from '@mui/icons-material/Place';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
-  paddingTop: theme.spacing(1),
-  paddingBottom: theme.spacing(1),
-  color: theme.palette.text.secondary,
+  paddingTop: '2px',
+  paddingBottom: '2px',
+  color: '#6C4621',
   display: 'flex',
   alignContent: 'center',
   '.MuiSvgIcon-root': {
@@ -47,22 +46,20 @@ function Footer() {
       >
         <Grid container spacing={3}>
           <Grid item {...responsive}>
-            <Typography variant='h6' component='h3'>
+            <Typography variant='h4' component='h3'>
               Contact Info
             </Typography>
-            <Stack direction='column' mt={2}>
-              <Item>
-                <LocalPhoneIcon />
-                Smart 09071599157
-              </Item>
-              <Item>
-                <EmailIcon />
-                rivervillageresort2022@gmail.com
-              </Item>
-            </Stack>
+            <Item>
+              <LocalPhoneIcon />
+              Smart 09071599157
+            </Item>
+            <Item>
+              <EmailIcon />
+              rivervillageresort2022@gmail.com
+            </Item>
           </Grid>
           <Grid item {...responsive}>
-            <Typography variant='h6' component='h3'>
+            <Typography variant='h4' component='h3'>
               Address
             </Typography>
             <Item>
@@ -73,7 +70,7 @@ function Footer() {
             </Item>
           </Grid>
           <Grid item {...responsive}>
-            <Typography variant='h6' component='h3'>
+            <Typography variant='h4' component='h3'>
               Business Hours
             </Typography>
             <Item>
@@ -101,16 +98,14 @@ function Footer() {
                   href='https://www.facebook.com/rivervillageresort'
                   target='_blank'
                 >
-                  <FacebookRoundedIcon
-                    sx={{ color: '#6C4621', fontSize: 25 }}
-                  />
+                  <FacebookIcon sx={{ color: '#6C4621', fontSize: 26 }} />
                 </Link>
 
                 <Link
                   href='https://www.youtube.com/channel/UC7X3HnCfIcyedhh6Ezb7-IA'
                   target='_blank'
                 >
-                  <YouTubeIcon sx={{ color: '#6C4621', fontSize: 25 }} />
+                  <YouTubeIcon sx={{ color: '#6C4621', fontSize: 28 }} />
                 </Link>
               </Box>
               <Typography color='primary' fontSize={14}>
