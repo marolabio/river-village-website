@@ -12,6 +12,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import EmailIcon from '@mui/icons-material/Email';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import PlaceIcon from '@mui/icons-material/Place';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
@@ -22,6 +24,7 @@ const Item = styled(Box)(({ theme }) => ({
   alignContent: 'center',
   '.MuiSvgIcon-root': {
     paddingRight: '6px',
+    color: '#6C4621',
   },
 }));
 
@@ -39,7 +42,7 @@ function Footer() {
       <Container
         sx={{
           paddingTop: 5,
-          paddingBottom: 5,
+          paddingBottom: 3,
         }}
       >
         <Grid container spacing={3}>
@@ -49,18 +52,13 @@ function Footer() {
             </Typography>
             <Stack direction='column' mt={2}>
               <Item>
-                {/* <LocalPhoneIcon /> */}
+                <LocalPhoneIcon />
                 Smart 09071599157
               </Item>
               <Item>
-                {/* <EmailIcon /> */}
+                <EmailIcon />
                 rivervillageresort2022@gmail.com
               </Item>
-
-              {/* <Item>
-                <FacebookIcon />
-                facebook.com/rivervillageresort
-              </Item> */}
             </Stack>
           </Grid>
           <Grid item {...responsive}>
@@ -68,7 +66,7 @@ function Footer() {
               Address
             </Typography>
             <Item>
-              {/* <PlaceIcon /> */}
+              <PlaceIcon />
               <Link href='https://www.google.com/maps/place/156+Patar+Rd,+Bolinao,+Pangasinan/@16.3577634,119.8159357,17z/data=!3m1!4b1!4m5!3m4!1s0x3393c995e75d72a1:0x19af4f0573ca8f0a!8m2!3d16.3577634!4d119.8181244'>
                 156 Patar Road, Bolinao, Pangasinan 2406 Philippines
               </Link>
@@ -79,27 +77,47 @@ function Footer() {
               Business Hours
             </Typography>
             <Item>
-              {/* <AccessTimeFilledIcon /> */}
+              <AccessTimeFilledIcon />
               Monday - Sunday, 9 am - 9 pm
             </Item>
           </Grid>
-          {/* <Grid
+          <Grid
             item
             xs={12}
             sx={{
               display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'flex-end',
+              justifyContent: 'center',
+              marginTop: 4,
             }}
           >
-            <img
-              src='/images/logo.png'
-              alt='river-village-logo'
-              loading='lazy'
-              width='90'
-              height='50'
-            />
-          </Grid> */}
+            <Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
+                <Link
+                  href='https://www.facebook.com/rivervillageresort'
+                  target='_blank'
+                >
+                  <FacebookRoundedIcon
+                    sx={{ color: '#6C4621', fontSize: 25 }}
+                  />
+                </Link>
+
+                <Link
+                  href='https://www.youtube.com/channel/UC7X3HnCfIcyedhh6Ezb7-IA'
+                  target='_blank'
+                >
+                  <YouTubeIcon sx={{ color: '#6C4621', fontSize: 25 }} />
+                </Link>
+              </Box>
+              <Typography color='primary' fontSize={14}>
+                Copyright © 2022 River Village Resort
+              </Typography>
+            </Box>
+          </Grid>
         </Grid>
       </Container>
     </Box>

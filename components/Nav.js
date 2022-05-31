@@ -69,7 +69,11 @@ const Nav = ({ executeScroll }) => {
                 autoHideDuration={1000}
                 onClose={handleClose}
               >
-                <Alert severity='success' sx={{ width: '100%' }}>
+                <Alert
+                  variant='filled'
+                  severity='success'
+                  sx={{ width: '100%' }}
+                >
                   Copied
                 </Alert>
               </Snackbar>
