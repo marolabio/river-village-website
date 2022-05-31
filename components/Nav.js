@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
+import * as ga from '../lib/ga';
 
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
@@ -24,6 +25,17 @@ const Item = styled(Box)(({ theme }) => ({
 const Nav = () => {
   const [copied, setCopied] = useState(false);
   const handleClose = () => setCopied((prev) => !prev);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText('09071599157');
+    setCopied(true);
+    ga.event({
+      action: 'Copy',
+      params: {
+        copy: 'Copy Number Button',
+      },
+    });
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -40,12 +52,7 @@ const Nav = () => {
               />
             </Box>
 
-            <Item
-              onClick={() => {
-                navigator.clipboard.writeText('09071599157');
-                setCopied(true);
-              }}
-            >
+            <Item onClick={() => handleCopy()}>
               <LocalPhoneIcon />
               Smart 09071599157
               <Snackbar
