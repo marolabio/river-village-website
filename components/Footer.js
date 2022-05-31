@@ -17,7 +17,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import * as ga from '../lib/ga';
 
 const Item = styled(Box)(({ theme }) => ({
-  ...theme.typography.body1,
+  fontSize: '1rem',
   paddingTop: '2px',
   paddingBottom: '2px',
   color: '#6C4621',
@@ -59,37 +59,24 @@ function Footer() {
             <Typography variant='h4' component='h3'>
               Contact Info
             </Typography>
-            <Item>
-              <LocalPhoneIcon />
-              Smart 09071599157
-            </Item>
-            <Item>
-              <EmailIcon />
-              rivervillageresort2022@gmail.com
-            </Item>
+            <Item>Smart 09071599157</Item>
+            <Item>rivervillageresort2022@gmail.com</Item>
           </Grid>
           <Grid item {...responsive}>
             <Typography variant='h4' component='h3'>
               Address
             </Typography>
             <Item>
-              <Button
-                variant='text'
-                startIcon={<PlaceIcon />}
-                onClick={() => handleRedirect()}
-              >
+              <Link onClick={() => handleRedirect()}>
                 156 Patar Road, Bolinao, Pangasinan 2406 Philippines
-              </Button>
+              </Link>
             </Item>
           </Grid>
           <Grid item {...responsive}>
             <Typography variant='h4' component='h3'>
               Business Hours
             </Typography>
-            <Item>
-              <AccessTimeFilledIcon />
-              Monday - Sunday, 9 am - 9 pm
-            </Item>
+            <Item>Monday - Sunday, 9 am - 9 pm</Item>
           </Grid>
           <Grid
             item
