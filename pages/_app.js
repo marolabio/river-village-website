@@ -7,8 +7,10 @@ import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    analytics.logEvent({ eventName: 'Visited' });
-  });
+    if (process.env.NODE_ENV === 'production') {
+      analytics();
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
