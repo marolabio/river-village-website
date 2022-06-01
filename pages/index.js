@@ -15,12 +15,12 @@ export default function Home() {
 
   return (
     <>
+      <MessengerCustomerChat pageId='105176082125964' appId='690841058692185' />
       <Nav />
       <Header executeScroll={executeScroll} />
       <About />
       <Explore myRef={myRef} />
       <Footer />
-      <MessengerCustomerChat pageId='105176082125964' appId='690841058692185' />
     </>
   );
 }
