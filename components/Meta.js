@@ -14,6 +14,8 @@ const Meta = ({ title, keywords, description }) => {
 };
 
 const keywords = [
+  'bolinao pangasinan beach resort',
+  'bolinao beach',
   'bolinao resort',
   'bolinao resort pangasinan',
   'patar beach bolinao resort',
@@ -31,13 +33,14 @@ const keywords = [
   'fishing bolinao pangasinan',
   'bolinao restaurant',
   'best resort in bolinao',
+  'patar beach',
 ];
 
 Meta.defaultProps = {
   title: 'River Village Resort And Restaurant',
   keywords: keywords.toString(),
   description:
-    'Eat delicious food, Relax and Experience native life. Located at Ilog Malino, Bolinao Pangasinan.',
+    'Eat delicious food, Relax and Experience village life. Located at Ilog Malino, Bolinao Pangasinan.',
 };
 
 export default Meta;

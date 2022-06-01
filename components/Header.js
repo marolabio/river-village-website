@@ -21,7 +21,7 @@ const Header = ({ executeScroll }) => {
             Enjoy your stay in Bolinao
           </Typography>
           <Typography variant='subtitle1' component='h2'>
-            Eat delicious food, Relax and Experience native life
+            Eat delicious food, Relax and Experience village life
           </Typography>
           <Box mt={3}>
             <Button

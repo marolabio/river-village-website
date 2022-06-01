@@ -8,12 +8,9 @@ import {
   Link,
   Button,
 } from '@mui/material';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import EmailIcon from '@mui/icons-material/Email';
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
-import PlaceIcon from '@mui/icons-material/Place';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import * as ga from '../lib/ga';
 
 const Item = styled(Box)(({ theme }) => ({
@@ -106,6 +103,12 @@ function Footer() {
                   target='_blank'
                 >
                   <YouTubeIcon sx={{ color: '#6C4621', fontSize: 28 }} />
+                </Link>
+                <Link
+                  href='https://www.instagram.com/rivervillageresort/'
+                  target='_blank'
+                >
+                  <InstagramIcon sx={{ color: '#6C4621', fontSize: 26 }} />
                 </Link>
               </Box>
               <Typography color='primary' fontSize={14}>
