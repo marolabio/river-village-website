@@ -2,7 +2,6 @@ import { Box, Container, Grid, styled, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import ModalImage from 'react-modal-image';
 
 const ExploreContainer = styled(Container)({
   height: '100%',
@@ -157,9 +156,8 @@ function Explore({ myRef }) {
                     paddingTop: '80%',
                   }}
                 ></Box> */}
-                <ModalImage
-                  large={data.images[0].img}
-                  small={data.images[0].img}
+                <img
+                  src={data.images[0].img}
                   alt={data.images[0].alt}
                   width='100%'
                 />
@@ -197,9 +195,8 @@ function Explore({ myRef }) {
                     paddingTop: '65%',
                   }}
                 ></Box> */}
-                <ModalImage
-                  large={data.images[1].img}
-                  small={data.images[1].img}
+                <img
+                  src={data.images[1].img}
                   alt={data.images[1].alt}
                   width='100%'
                 />
