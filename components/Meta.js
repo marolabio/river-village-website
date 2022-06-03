@@ -15,32 +15,28 @@ const Meta = ({ title, keywords, description }) => {
 
 const keywords = [
   'bolinao pangasinan beach resort',
+  'patar beach',
+  'resort in bolinao pangasinan',
+  'seafood restaurant',
+  'bolinao',
   'bolinao beach',
   'bolinao resort',
-  'bolinao resort pangasinan',
-  'patar beach bolinao resort',
   'patar bolinao resort',
-  'bolinao resort cheap',
-  'natures camp bolinao',
-  'bolinao pangasinan beach resort',
   'bolinao pangasinan',
-  'river village',
   'river village resort',
   'river village resort bolinao',
-  'resort in bolinao pangasinan',
   'bolinao pangasinan tourist spot',
-  'patar white beach bolinao pangasinan',
-  'fishing bolinao pangasinan',
   'bolinao restaurant',
   'best resort in bolinao',
-  'patar beach',
+  'best restaurant in bolinao',
 ];
 
 Meta.defaultProps = {
-  title: 'River Village Resort And Restaurant',
+  title:
+    'River Village Resort And Restaurant: Best Seafood Restaurant in Bolinao | Relaxing Resort Experience',
   keywords: keywords.toString(),
   description:
-    'Eat delicious food, Relax and Experience village life. Located at Ilog Malino, Bolinao Pangasinan.',
+    'River Village Resort and Restaurant is the perfect place to Eat delicious food, Relax, and Experience village life. Our restaurant serves the best seafood in Bolinao which can be enjoy with family or friends. Come visit us today!',
 };
 
 export default Meta;
