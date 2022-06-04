@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import ReactPlayer from 'react-player';
+import * as ga from '../lib/ga';
 
 const responsive = {
   xs: 12,
@@ -25,6 +26,11 @@ function About() {
               width='100%'
               loop
               url='https://www.youtube.com/watch?v=DYvRzmNYvzQ'
+              onStart={() =>
+                ga.event({
+                  action: 'Video Played',
+                })
+              }
             />
           </Paper>
         </Grid>

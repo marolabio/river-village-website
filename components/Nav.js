@@ -8,10 +8,10 @@ import {
   Box,
   AppBar,
 } from '@mui/material';
+import Link from 'next/link';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
 import * as ga from '../lib/ga';
-
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
   display: 'flex',
@@ -39,14 +39,23 @@ const Nav = () => {
       <AppBar position='fixed' color='inherit'>
         <Container disableGutters>
           <Toolbar>
-            <Box sx={{ flexGrow: 1, display: 'flex', alignContent: 'center' }}>
-              <img
-                src='/images/logo.jpg'
-                alt='river-village-logo'
-                loading='lazy'
-                width='100'
-                height='50'
-              />
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: 'flex',
+                alignContent: 'center',
+                cursor: 'pointer',
+              }}
+            >
+              <Link href='/'>
+                <img
+                  src='/images/river-village-logo.jpg'
+                  alt='river-village-logo'
+                  loading='lazy'
+                  width='100'
+                  height='50'
+                />
+              </Link>
             </Box>
 
             <Item onClick={() => handleCopy()}>

@@ -1,5 +1,6 @@
 import { Box, Container, Grid, styled, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import Link from 'next/link';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 
@@ -16,10 +17,16 @@ const exploreData = [
     id: 0,
     name: 'Restaurant',
     details:
-      'Satisfy your cravings with the delicious Filipino and Western food exclusive in our restaurant',
+      'Satisfy your cravings with the delicious Filipino and Western food exclusive in our restaurant. ',
     images: [
-      { img: '/images/restaurant1.jpg', title: 'river village restaurant' },
-      { img: '/images/restaurant2.jpg', title: 'river village restaurant' },
+      {
+        img: '/images/restaurant-front-view.jpg',
+        alt: 'river village restaurant front view',
+      },
+      {
+        img: '/images/restaurant-inside-view.jpg',
+        alt: 'river village restaurant with alot of customers',
+      },
     ],
   },
   {
@@ -28,8 +35,14 @@ const exploreData = [
     details:
       'Relax and enjoy the view on top with picturesque river, ocean and sunset.',
     images: [
-      { img: '/images/treehouse1.jpg', title: 'river village treehouse' },
-      { img: '/images/treehouse2.jpg', title: 'river village treehouse' },
+      {
+        img: '/images/treehouse1.jpg',
+        alt: 'river village treehouse image portrait',
+      },
+      {
+        img: '/images/treehouse2.jpg',
+        alt: 'river village treehouse side view',
+      },
     ],
   },
   {
@@ -38,8 +51,14 @@ const exploreData = [
     details:
       'Dine or bring your own food in our cottages while watching the fishes',
     images: [
-      { img: '/images/cottages1.jpg', title: 'river village cottages' },
-      { img: '/images/cottages2.jpg', title: 'river village cottages' },
+      {
+        img: '/images/cottages1.jpg',
+        alt: 'river village cottages view deck 2',
+      },
+      {
+        img: '/images/cottages2.jpg',
+        alt: 'river village cottages with the river',
+      },
     ],
   },
   {
@@ -48,8 +67,11 @@ const exploreData = [
     details:
       'Feel the excitement and  thrill of diving, swimming and kayaking!',
     images: [
-      { img: '/images/kayak1.jpg', title: 'river village kayaking' },
-      { img: '/images/kayak2.jpg', title: 'river village kayaking' },
+      {
+        img: '/images/kayak1.jpg',
+        alt: 'river village kayaking image with treehouse',
+      },
+      { img: '/images/kayak2.jpg', alt: 'river village kayaking image' },
     ],
   },
   {
@@ -58,8 +80,8 @@ const exploreData = [
     details:
       'Experience the village life. Tip: You can take away your fresh catch or have it cooked in our restaurant',
     images: [
-      { img: '/images/fishing1.jpg', title: 'river village bangus fish' },
-      { img: '/images/fishing2.jpg', title: 'river village fishing' },
+      { img: '/images/fishing1.jpg', alt: 'river village bangus fish image' },
+      { img: '/images/fishing2.jpg', alt: 'river village fishing image' },
     ],
   },
   {
@@ -67,8 +89,8 @@ const exploreData = [
     name: 'Camping',
     details: 'Be one with nature. Unplug and enjoy the simplicity of nature.',
     images: [
-      { img: '/images/camping1.jpg', title: 'river village camping' },
-      { img: '/images/camping2.jpg', title: 'river village camping' },
+      { img: '/images/camping1.jpg', alt: 'river village camping 1 image' },
+      { img: '/images/camping2.jpg', alt: 'river village camping 2 image' },
     ],
   },
 ];
@@ -124,7 +146,21 @@ function Explore({ myRef }) {
             EXPLORE
           </Typography>
           <Typography variant='h3' component='h3'>
-            {data.name}
+            {data.name}{' '}
+            {data.id === 0 && (
+              <Link href='/menu'>
+                <span
+                  style={{
+                    marginBlock: 2,
+                    cursor: 'pointer',
+                    fontSize: '1rem',
+                    fontFamily: 'open sans',
+                  }}
+                >
+                  (See Menu)
+                </span>
+              </Link>
+            )}
           </Typography>
           <Grid container mt={3} mb={4}>
             <Grid
@@ -187,6 +223,7 @@ function Explore({ myRef }) {
                 <Typography component='p' variant='body1' mb={2} mt={2}>
                   {data.details}
                 </Typography>
+
                 {/* <Box
                   sx={{
                     background: `url(${data.images[1].img}) no-repeat`,
