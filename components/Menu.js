@@ -13,7 +13,7 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '../components/Image';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -131,37 +131,23 @@ function Menu() {
             <TabPanel value={value} index={data.id}>
               <Grid container spacing={2} justifyContent='center'>
                 <Grid item>
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      height: 640,
-                      width: 510,
-                    }}
-                  >
-                    <Image
-                      placeholder='blur'
-                      layout='fill'
-                      src={data.images[0].img}
-                      alt={data.images[0].alt}
-                    />
-                  </Box>
+                  <Image
+                    placeholder='blur'
+                    layout='fill'
+                    width={510}
+                    src={data.images[0].img}
+                    alt={data.images[0].alt}
+                  />
                 </Grid>
                 {data.images[1] && (
                   <Grid item>
-                    <Box
-                      sx={{
-                        position: 'relative',
-                        height: 640,
-                        width: 510,
-                      }}
-                    >
-                      <Image
-                        placeholder='blur'
-                        layout='fill'
-                        src={data.images[1].img}
-                        alt={data.images[1].alt}
-                      />
-                    </Box>
+                    <Image
+                      placeholder='blur'
+                      layout='fill'
+                      width={510}
+                      src={data.images[1].img}
+                      alt={data.images[1].alt}
+                    />
                   </Grid>
                 )}
               </Grid>
