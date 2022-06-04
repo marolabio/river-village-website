@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import Nav from '../components/Nav';
 import About from '../components/About';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import Meta from '../components/Meta';
 
 export default function Home() {
   const myRef = useRef(null);
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
     <>
+      <Meta />
       <MessengerCustomerChat pageId='105176082125964' appId='690841058692185' />
       <Nav />
       <Header executeScroll={executeScroll} />

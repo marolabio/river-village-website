@@ -5,12 +5,17 @@ import Menu from '../components/Menu';
 
 function menu() {
   return (
-    <div>
+    <>
+      <Meta
+        title='River Village Restaurant Menu'
+        description='We have a wide variety of delicious seafood dishes including sungayan, bangus, shrimp, squid and etc. Try out our boodle fight and bilao, perfect for families and friends to gather and enjoy a meal together.'
+        keywords='seafood menu, bolinao seafood, sungayan, bangus, pizza, pasta, seafood, bolinao pangasinan, boodle fight, pansit, bilao'
+      />
       <MessengerCustomerChat pageId='105176082125964' appId='690841058692185' />
       <Nav />
       <Menu />
       <Footer />
-    </div>
+    </>
   );
 }
 
