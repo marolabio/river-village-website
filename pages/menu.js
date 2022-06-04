@@ -2,6 +2,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Menu from '../components/Menu';
+import Meta from '../components/Meta';
 
 function menu() {
   return (
