@@ -13,6 +13,7 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -132,16 +133,16 @@ function Menu() {
                 <Grid item>
                   <Box
                     sx={{
-                      maxWidth: {
-                        xs: '100%',
-                        md: 550,
-                      },
+                      position: 'relative',
+                      height: 640,
+                      width: 510,
                     }}
                   >
-                    <img
+                    <Image
+                      placeholder='blur'
+                      layout='fill'
                       src={data.images[0].img}
                       alt={data.images[0].alt}
-                      width='100%'
                     />
                   </Box>
                 </Grid>
@@ -149,16 +150,16 @@ function Menu() {
                   <Grid item>
                     <Box
                       sx={{
-                        maxWidth: {
-                          xs: '100%',
-                          md: 550,
-                        },
+                        position: 'relative',
+                        height: 640,
+                        width: 510,
                       }}
                     >
-                      <img
+                      <Image
+                        placeholder='blur'
+                        layout='fill'
                         src={data.images[1].img}
                         alt={data.images[1].alt}
-                        width='100%'
                       />
                     </Box>
                   </Grid>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
+import Image from '../components/Image';
 
 const ExploreContainer = styled(Container)({
   height: '100%',
@@ -120,8 +121,6 @@ function Explore({ myRef }) {
                 disableRipple
                 sx={{
                   display: 'table',
-                  // paddingLeft: 0,
-                  // paddingRight: 0,
                   border: '2px dotted transparent',
 
                   '&:hover': {
@@ -176,26 +175,13 @@ function Explore({ myRef }) {
                 justifyContent: 'flex-end',
               }}
             >
-              <Box
-                sx={{
-                  maxWidth: {
-                    xs: '100%',
-                    md: 380,
-                  },
-                }}
-              >
-                {/* <Box
-                  sx={{
-                    background: `url(${data.images[0].img}) no-repeat`,
-                    backgroundSize: 'contain',
-                    width: '100%',
-                    paddingTop: '80%',
-                  }}
-                ></Box> */}
-                <img
+              <Box>
+                <Image
                   src={data.images[0].img}
                   alt={data.images[0].alt}
-                  width='100%'
+                  placeholder='blur'
+                  layout='fill'
+                  width={380}
                 />
               </Box>
             </Grid>
@@ -212,30 +198,16 @@ function Explore({ myRef }) {
                 justifyContent: 'flex-end',
               }}
             >
-              <Box
-                sx={{
-                  maxWidth: {
-                    xs: '100%',
-                    md: 350,
-                  },
-                }}
-              >
+              <Box>
                 <Typography component='p' variant='body1' mb={2} mt={2}>
                   {data.details}
                 </Typography>
-
-                {/* <Box
-                  sx={{
-                    background: `url(${data.images[1].img}) no-repeat`,
-                    backgroundSize: 'contain',
-                    width: '100%',
-                    paddingTop: '65%',
-                  }}
-                ></Box> */}
-                <img
+                <Image
                   src={data.images[1].img}
                   alt={data.images[1].alt}
-                  width='100%'
+                  placeholder='blur'
+                  layout='fill'
+                  width={380}
                 />
               </Box>
             </Grid>
