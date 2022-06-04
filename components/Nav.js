@@ -12,6 +12,7 @@ import Link from 'next/link';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
 import * as ga from '../lib/ga';
+import Image from './Image';
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
   display: 'flex',
@@ -48,12 +49,11 @@ const Nav = () => {
               }}
             >
               <Link href='/'>
-                <img
+                <Image
                   src='/images/river-village-logo.jpg'
                   alt='river-village-logo'
-                  loading='lazy'
-                  width='100'
-                  height='50'
+                  layout='fill'
+                  width={100}
                 />
               </Link>
             </Box>
