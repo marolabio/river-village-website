@@ -147,7 +147,7 @@ function Explore({ myRef }) {
           <Typography variant='h3' component='h3'>
             {data.name}{' '}
             {data.id === 0 && (
-              <Link href='/menu'>
+              <a href='/menu' title='See Menu'>
                 <span
                   style={{
                     marginBlock: 2,
@@ -158,7 +158,7 @@ function Explore({ myRef }) {
                 >
                   (See Menu)
                 </span>
-              </Link>
+              </a>
             )}
           </Typography>
           <Grid container mt={3} mb={4}>

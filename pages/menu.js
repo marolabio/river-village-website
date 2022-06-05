@@ -3,8 +3,14 @@ import Footer from '../components/Footer';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Menu from '../components/Menu';
 import Meta from '../components/Meta';
+import { useEffect } from 'react';
+import * as ga from '../lib/ga';
 
 function menu() {
+  useEffect(() => {
+    ga.pageview('/menu');
+  }, []);
+
   return (
     <>
       <Meta
