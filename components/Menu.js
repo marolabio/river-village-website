@@ -13,7 +13,6 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Link from 'next/link';
-import Image from '../components/Image';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -27,11 +26,7 @@ function TabPanel(props) {
       style={{ width: '100%' }}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -128,12 +123,10 @@ function Menu() {
           </Tabs>
 
           {menuData.map((data) => (
-            <TabPanel value={value} index={data.id}>
+            <TabPanel value={value} index={data.id} key={data.id}>
               <Grid container spacing={2} justifyContent='center'>
                 <Grid item>
-                  <Image
-                    placeholder='blur'
-                    layout='fill'
+                  <img
                     width={510}
                     src={data.images[0].img}
                     alt={data.images[0].alt}
@@ -141,9 +134,7 @@ function Menu() {
                 </Grid>
                 {data.images[1] && (
                   <Grid item>
-                    <Image
-                      placeholder='blur'
-                      layout='fill'
+                    <img
                       width={510}
                       src={data.images[1].img}
                       alt={data.images[1].alt}

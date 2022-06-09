@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Image from '../components/Image';
 
 const ExploreContainer = styled(Container)({
   height: '100%',
@@ -176,11 +175,9 @@ function Explore({ myRef }) {
               }}
             >
               <Box>
-                <Image
+                <img
                   src={data.images[0].img}
                   alt={data.images[0].alt}
-                  placeholder='blur'
-                  layout='fill'
                   width={380}
                 />
               </Box>
@@ -202,11 +199,9 @@ function Explore({ myRef }) {
                 <Typography component='p' variant='body1' mb={2} mt={2}>
                   {data.details}
                 </Typography>
-                <Image
+                <img
                   src={data.images[1].img}
                   alt={data.images[1].alt}
-                  placeholder='blur'
-                  layout='fill'
                   width={380}
                 />
               </Box>

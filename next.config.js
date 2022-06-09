@@ -1,13 +1,6 @@
-module.exports = {
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
+const nextConfig = {
+  reactStrictMode: true,
   trailingSlash: true,
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      require('./scripts/sitemap-generator');
-    }
-    return config;
-  },
 };
+
+module.exports = nextConfig;

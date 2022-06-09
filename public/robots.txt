@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rivervillageresort.com
+
+# Sitemaps
+Sitemap: https://rivervillageresort.com/sitemap.xml
