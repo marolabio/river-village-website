@@ -35,9 +35,7 @@ const responsive = {
 };
 
 function Footer() {
-  const handleRedirect = () => {
-    window.open('https://goo.gl/maps/BPGjiRUDc4xMS1wt6', '_ blank');
-
+  const handleClickAddress = () => {
     ga.event({
       action: 'Address Link Clicked',
     });
@@ -69,7 +67,12 @@ function Footer() {
               Address
             </Typography>
             <Item>
-              <Link onClick={() => handleRedirect()}>
+              <Link
+                sx={{ cursor: 'pointer' }}
+                href='https://goo.gl/maps/BPGjiRUDc4xMS1wt6'
+                target='_blank'
+                onClick={() => handleClickAddress()}
+              >
                 156 Patar Road, Bolinao, Pangasinan 2406 Philippines
               </Link>
             </Item>

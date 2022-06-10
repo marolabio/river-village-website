@@ -1,3 +1,4 @@
+import { server } from '../config';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { MessengerChat } from 'react-messenger-chat-plugin';
@@ -6,7 +7,18 @@ import Meta from '../components/Meta';
 import { useEffect } from 'react';
 import * as ga from '../lib/ga';
 
-function menu() {
+export async function getServerSideProps() {
+  const res = await fetch(`${server}/api/menu`);
+  const menuData = await res.json();
+
+  return {
+    props: {
+      menuData,
+    },
+  };
+}
+
+function menu({ menuData }) {
   useEffect(() => {
     ga.pageview('/menu');
   }, []);
@@ -20,7 +32,7 @@ function menu() {
       />
       <MessengerChat pageId='105176082125964' />
       <Nav />
-      <Menu />
+      <Menu menuData={menuData} />
       <Footer />
     </>
   );

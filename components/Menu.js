@@ -2,10 +2,8 @@ import {
   Box,
   Tabs,
   Tab,
-  Typography,
   Container,
   Grid,
-  Paper,
   useMediaQuery,
   Button,
 } from '@mui/material';
@@ -13,6 +11,7 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -31,63 +30,7 @@ function TabPanel(props) {
   );
 }
 
-const menuData = [
-  {
-    id: 0,
-    name: 'Main Menu',
-    details: '',
-    images: [
-      { img: '/images/prices/menu1.jpg', alt: 'river village menu 1 prices' },
-      { img: '/images/prices/menu2.jpg', alt: 'river village menu 2 prices' },
-    ],
-  },
-  {
-    id: 1,
-    name: 'Boodle',
-    details: '',
-    images: [
-      {
-        img: '/images/prices/boodle.jpg',
-        alt: 'river village boodle menu prices',
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: 'Bilao',
-    details: '',
-    images: [
-      {
-        img: '/images/prices/bilao.jpg',
-        alt: 'river village bilao menu prices',
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Snacks',
-    details: '',
-    images: [
-      {
-        img: '/images/prices/snacks.jpg',
-        alt: 'river village snack menu prices',
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: 'Activities',
-    details: '',
-    images: [
-      {
-        img: '/images/prices/activities.jpg',
-        alt: 'river village activities prices',
-      },
-    ],
-  },
-];
-
-function Menu() {
+function Menu({ menuData }) {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
   const mobileSize = useMediaQuery(theme.breakpoints.up('md'));
@@ -126,16 +69,18 @@ function Menu() {
             <TabPanel value={value} index={data.id} key={data.id}>
               <Grid container spacing={2} justifyContent='center'>
                 <Grid item>
-                  <img
+                  <Image
                     width={510}
+                    height={620}
                     src={data.images[0].img}
                     alt={data.images[0].alt}
                   />
                 </Grid>
                 {data.images[1] && (
                   <Grid item>
-                    <img
+                    <Image
                       width={510}
+                      height={620}
                       src={data.images[1].img}
                       alt={data.images[1].alt}
                     />
