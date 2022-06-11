@@ -25,7 +25,7 @@ function TabPanel(props) {
       style={{ width: '100%' }}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box>{children}</Box>}
     </div>
   );
 }
@@ -67,23 +67,39 @@ function Menu({ menuData }) {
 
           {menuData.map((data) => (
             <TabPanel value={value} index={data.id} key={data.id}>
-              <Grid container spacing={2} justifyContent='center'>
-                <Grid item>
-                  <Image
-                    width={510}
-                    height={620}
-                    src={data.images[0].img}
-                    alt={data.images[0].alt}
-                  />
+              <Grid container justifyContent='center'>
+                <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      maxWidth: '500px',
+                      height: '600px',
+                    }}
+                  >
+                    <Image
+                      src={data.images[0].img}
+                      alt={data.images[0].alt}
+                      layout='fill'
+                      objectFit='contain'
+                    />
+                  </Box>
                 </Grid>
                 {data.images[1] && (
-                  <Grid item>
-                    <Image
-                      width={510}
-                      height={620}
-                      src={data.images[1].img}
-                      alt={data.images[1].alt}
-                    />
+                  <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+                    <Box
+                      sx={{
+                        position: 'relative',
+                        maxWidth: '500px',
+                        height: '600px',
+                      }}
+                    >
+                      <Image
+                        src={data.images[1].img}
+                        alt={data.images[1].alt}
+                        layout='fill'
+                        objectFit='contain'
+                      />
+                    </Box>
                   </Grid>
                 )}
               </Grid>

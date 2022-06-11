@@ -2,7 +2,6 @@ import { Box, Container, Grid, styled, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-// import Image from './Image';
 import Image from 'next/image';
 
 const ExploreContainer = styled(Container)({
@@ -95,7 +94,7 @@ function Explore({ myRef, exploreData }) {
               <Box
                 sx={{
                   position: 'relative',
-                  width: '380px',
+                  maxWidth: '380px',
                   height: '300px',
                 }}
               >
@@ -126,7 +125,7 @@ function Explore({ myRef, exploreData }) {
               <Box
                 sx={{
                   position: 'relative',
-                  width: '380px',
+                  maxWidth: '380px',
                   height: '300px',
                 }}
               >
