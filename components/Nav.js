@@ -3,15 +3,16 @@ import {
   styled,
   Alert,
   Snackbar,
-  Typography,
   Toolbar,
   Box,
   AppBar,
+  Grid,
 } from '@mui/material';
 import Link from 'next/link';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { useState } from 'react';
 import * as ga from '../lib/ga';
+import Image from 'next/image';
 
 const Item = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
@@ -40,41 +41,45 @@ const Nav = () => {
       <AppBar position='fixed' color='inherit'>
         <Container disableGutters>
           <Toolbar>
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: 'flex',
-                alignContent: 'center',
-                cursor: 'pointer',
-              }}
+            <Grid
+              container
+              direction='row'
+              justifyContent='space-between'
+              alignItems='center'
             >
-              <Link href='/'>
-                <img
-                  src='/images/river-village-logo.jpg'
-                  alt='river-village-logo'
-                  width={100}
-                />
-              </Link>
-            </Box>
+              <Grid item sx={{ cursor: 'pointer' }}>
+                <Link href='/'>
+                  <Image
+                    src='/images/river-village-logo.jpg'
+                    alt='river-village-logo'
+                    width={100}
+                    height={50}
+                    objectFit='contain'
+                  />
+                </Link>
+              </Grid>
 
-            <Item onClick={() => handleCopy()}>
-              <LocalPhoneIcon />
-              Smart 09071599157
-              <Snackbar
-                open={copied}
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                autoHideDuration={1000}
-                onClose={handleClose}
-              >
-                <Alert
-                  variant='filled'
-                  severity='success'
-                  sx={{ width: '100%' }}
-                >
-                  Copied
-                </Alert>
-              </Snackbar>
-            </Item>
+              <Grid item>
+                <Item onClick={() => handleCopy()}>
+                  <LocalPhoneIcon />
+                  Smart 09071599157
+                  <Snackbar
+                    open={copied}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                    autoHideDuration={1000}
+                    onClose={handleClose}
+                  >
+                    <Alert
+                      variant='filled'
+                      severity='success'
+                      sx={{ width: '100%' }}
+                    >
+                      Copied
+                    </Alert>
+                  </Snackbar>
+                </Item>
+              </Grid>
+            </Grid>
           </Toolbar>
         </Container>
       </AppBar>
