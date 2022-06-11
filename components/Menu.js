@@ -46,6 +46,7 @@ function Menu({ menuData }) {
           sx={{
             flexGrow: 1,
             display: { md: 'flex', xs: 'block' },
+            marginBottom: '20px',
           }}
         >
           <Tabs
@@ -74,6 +75,7 @@ function Menu({ menuData }) {
                       position: 'relative',
                       maxWidth: '500px',
                       height: '600px',
+                      margin: 'auto',
                     }}
                   >
                     <Image
@@ -91,6 +93,7 @@ function Menu({ menuData }) {
                         position: 'relative',
                         maxWidth: '500px',
                         height: '600px',
+                        margin: 'auto',
                       }}
                     >
                       <Image
