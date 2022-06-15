@@ -35,7 +35,7 @@ export const exploreData = [
     id: 2,
     name: 'Cottages',
     details:
-      'Dine or bring your own food in our cottages while watching the fishes',
+      'Dine or bring your food to our cottages while watching the fishes',
     images: [
       {
         img: '/images/cottages1.jpg',
@@ -51,7 +51,7 @@ export const exploreData = [
     id: 3,
     name: 'Kayaking',
     details:
-      'Feel the excitement and  thrill of diving, swimming and kayaking!',
+      'Feel the excitement and  thrill of diving, swimming, and kayaking!',
     images: [
       {
         img: '/images/kayak1.jpg',
